@@ -282,9 +282,9 @@ def plot_model_2D(
     x = XY[:, 0]
     y = XY[:, 1]
     
-    u_exact = exact_u(x, y).reshape(N, N)
-    dux_exact = exact_dx(x, y).reshape(N, N)
-    duy_exact = exact_dy(x, y).reshape(N, N)
+    u_exact = np.asarray(exact_u(x, y)).reshape(N, N)
+    dux_exact = np.asarray(exact_dx(x, y)).reshape(N, N)
+    duy_exact = np.asarray(exact_dy(x, y)).reshape(N, N)
 
     # -------------------------------------------------
     # Plot helper
